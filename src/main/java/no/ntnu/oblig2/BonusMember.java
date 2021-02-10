@@ -22,6 +22,14 @@ public class BonusMember {
         this.eMailAddress = eMailAddress;
     }
 
+    public void registerBonusPoints(int newPoints){
+        membership.registerPoints(bonusPointsBalance, newPoints)
+    }
+
+    public void checkAndSetMembership(){
+        
+    }
+
     public Boolean checkPassword(String password){
         if(password.equals(this.password)){
             return true;
