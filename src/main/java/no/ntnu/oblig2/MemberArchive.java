@@ -34,7 +34,7 @@ public class MemberArchive {
      */
     public boolean addMember(BonusMember bonusMember) {
         boolean success = false;
-        //TODO: Fill in your solution
+        
         return success;
     }
 
@@ -78,6 +78,5 @@ public class MemberArchive {
         this.members.put(member.getMemberNumber(), member);
 
     }
-
 
 }

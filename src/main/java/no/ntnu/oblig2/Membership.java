@@ -1,23 +1,21 @@
 package no.ntnu.oblig2;
 
 
-public class Membership {
+public abstract class Membership {
 
-private int points;
-private String membershipName;
-
+    private int points;
 
 
-public Membership(int points, String memberShipName){
-    this.points = points;
-    this.membershipName = memberShipName;
-}
+    public Membership(int points) {
+        this.points = points;
+    }
 
-public int registerPoints(int bonusPointBalance, int newPoints){
-    bonusPointBalance += newPoints;
-    return newPoints;
-}
-public String getMemberShipName(){
-    return this.membershipName;
-}
+    public int registerPoints(int bonusPointBalance, int newPoints) {
+        this.points = bonusPointBalance + newPoints;
+        return points;
+    }
+
+    public String getMemberShipName() {
+        return "";
+    }
 }
