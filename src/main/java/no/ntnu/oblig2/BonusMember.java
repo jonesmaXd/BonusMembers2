@@ -37,13 +37,10 @@ public class BonusMember {
         }
     }
 
-    public Boolean checkPassword(String password) {
-        if (password.equals(this.password)) {
-            return true;
-        } else {
-            return false;
+    public boolean checkPassword(String password) {
+        return this.password.equalsIgnoreCase(password);
         }
-    }
+
 
     public int getMemberNumber() {
         return memberNumber;

@@ -33,10 +33,35 @@ public class MemberArchive {
      * membernumber that allready exsists.
      */
     public boolean addMember(BonusMember bonusMember) {
+
         boolean success = false;
-        
+        if (!this.members.containsKey(bonusMember.getMemberNumber())) {
+            success = true;
+            this.members.put(bonusMember.getMemberNumber(), bonusMember);
+        } else {
+            System.out.println("Member with member number: " + bonusMember.getMemberNumber() + " was not found");
+
+            success = false;
+        }
         return success;
     }
+
+
+    public int findPoints(int memberNumber, String password) {
+        int foundPoints = 0;
+        boolean isMemberReal = this.members.containsKey(memberNumber);
+        BonusMember member = this.members.get(memberNumber);
+        if (isMemberReal) {
+            if (member.checkPassword(password)) {
+                foundPoints = member.getBonusPointsBalance();
+            }
+        } else {
+            foundPoints = -1;
+        }
+        return foundPoints;
+
+    }
+
 
     /**
      * Registers new bonuspoints to the member with the member number given
@@ -50,7 +75,16 @@ public class MemberArchive {
      */
     public boolean registerPoints(int memberNumber, int bonusPoints) {
         boolean success = false;
-        //TODO: Fill in your solution
+        BonusMember bonusMember = this.members.get(memberNumber);
+        if (this.members.containsKey(memberNumber)) {
+            bonusMember.registerBonusPoints(bonusPoints);
+            success = true;
+        } else {
+            System.out.println("Member with member number: " + memberNumber + " was not found");
+            success = false;
+        }
+
+
         return success;
     }
 
@@ -58,7 +92,37 @@ public class MemberArchive {
      * Lists all members to the console.
      */
     public void listAllMembers() {
-        //TODO: Fill in your solution
+
+    }
+
+    public void listBasicMember(BonusMember basicMember) {
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+    }
+
+    public void listSilverMember(BonusMember silverMember) {
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+
+    }
+
+    public void listGoldMember(BonusMember goldMember) {
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+
     }
 
 
