@@ -23,11 +23,11 @@ public class BonusMember {
     }
 
     public void registerBonusPoints(int newPoints){
-        membership.registerPoints(bonusPointsBalance, newPoints)
+        membership.registerPoints(bonusPointsBalance, newPoints);
     }
 
     public void checkAndSetMembership(){
-        
+
     }
 
     public Boolean checkPassword(String password){
