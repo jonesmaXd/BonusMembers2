@@ -95,7 +95,7 @@ public class MemberArchive {
 
     }
 
-    public void listBasicMember(BonusMember basicMember) {
+    public void listBasicMember(BasicMembership basicMember) {
         System.out.println("");
         System.out.println("");
         System.out.println("");
@@ -105,7 +105,7 @@ public class MemberArchive {
         System.out.println("");
     }
 
-    public void listSilverMember(BonusMember silverMember) {
+    public void listSilverMember(SilverMembership silverMember) {
         System.out.println("");
         System.out.println("");
         System.out.println("");
@@ -115,7 +115,7 @@ public class MemberArchive {
 
     }
 
-    public void listGoldMember(BonusMember goldMember) {
+    public void listGoldMember(GoldMembership goldMember) {
         System.out.println("");
         System.out.println("");
         System.out.println("");

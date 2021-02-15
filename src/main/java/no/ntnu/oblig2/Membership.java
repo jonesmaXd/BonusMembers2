@@ -10,10 +10,7 @@ public abstract class Membership {
         this.points = points;
     }
 
-    public int registerPoints(int bonusPointBalance, int newPoints) {
-        this.points = bonusPointBalance + newPoints;
-        return points;
-    }
+    public abstract int registerPoints(int bonusPointBalance, int newPoints);
 
     public String getMemberShipName() {
         return "";
