@@ -2,7 +2,7 @@ package no.ntnu.oblig2;
 
 public class SilverMembership extends Membership {
 
-    private final float POINTS_SCALING_FACTOR = 1.2f;
+    private static final float POINTS_SCALING_FACTOR = 1.2f;
 
     public SilverMembership(int points) {
         super(points);
@@ -13,6 +13,8 @@ public class SilverMembership extends Membership {
         bonusPointBalance += Math.round(newPoints * POINTS_SCALING_FACTOR);
         return bonusPointBalance;
     }
+
+    @Override
     public String getMemberShipName() {
         return "Silver";
     }

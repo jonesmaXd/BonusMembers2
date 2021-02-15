@@ -92,44 +92,27 @@ public class MemberArchive {
      * Lists all members to the console.
      */
     public void listAllMembers() {
+        for(BonusMember bonusMember : this.members.values()){
+            printMemberDetails(bonusMember);
+        }
 
     }
 
-    public void listBasicMember(BasicMembership basicMember) {
+    public void printMemberDetails(BonusMember bonus) {
+        System.out.println("Member Number: " + bonus.getMemberNumber());
+        System.out.println("Enrolled date: " + bonus.getEnrolledDate());
+        System.out.println("Name: " + bonus.getName());
+        System.out.println("Email address: " + bonus.getEMailAddress());
+        System.out.println("points available: " + bonus.getBonusPointsBalance());
+        System.out.println("Membership level: " + bonus.getMemberShipLevel());
         System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-    }
-
-    public void listSilverMember(SilverMembership silverMember) {
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-
-    }
-
-    public void listGoldMember(GoldMembership goldMember) {
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-
     }
 
 
     /**
      * Fills the register with some arbitrary members, for testing purposes.
      */
-    private void fillRegisterWithTestdata() {
+    public void fillRegisterWithTestdata() {
         BonusMember member = new BonusMember(1, LocalDate.now(), 10000, "Olsen, Ole", "ole@olsen.biz");
         this.members.put(member.getMemberNumber(), member);
         member = new BonusMember(2, LocalDate.now(), 15000, "Jensen, Jens", "jens@jensen.biz");

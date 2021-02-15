@@ -12,7 +12,7 @@ public abstract class Membership {
 
     public abstract int registerPoints(int bonusPointBalance, int newPoints);
 
-    public String getMemberShipName() {
+    public String getMemberShipName(){
         return "";
     }
 }

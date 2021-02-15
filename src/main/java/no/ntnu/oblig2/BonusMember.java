@@ -20,6 +20,7 @@ public class BonusMember {
         this.bonusPointsBalance = bonusPointsBalance;
         this.name = name;
         this.eMailAddress = eMailAddress;
+        this.checkAndSetMembership();
     }
 
     public void registerBonusPoints(int newPoints) {
@@ -39,7 +40,12 @@ public class BonusMember {
 
     public boolean checkPassword(String password) {
         return this.password.equalsIgnoreCase(password);
-        }
+    }
+
+
+    public String getMemberShipLevel() {
+        return this.membership.getMemberShipName();
+    }
 
 
     public int getMemberNumber() {
@@ -66,4 +72,8 @@ public class BonusMember {
         return password;
     }
 
+    @Override
+    public String toString() {
+        return "MemberNumber: " + memberNumber + "\nBonusPointsBalance: " + bonusPointsBalance + "\nName: " + name + "\nMembership level: " + this.membership.getMemberShipName();
+    }
 }

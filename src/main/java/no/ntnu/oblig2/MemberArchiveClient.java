@@ -19,7 +19,7 @@ public class MemberArchiveClient {
         MemberArchive memberArchive = new MemberArchive();
 
         memberArchive.listAllMembers();
-
+        memberArchive.fillRegisterWithTestdata();
         System.out.println("\nAdd some bonuspoints to all of the members..\n");
 
         System.out.println("Member 1 gets 10.000");
